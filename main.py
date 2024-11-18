@@ -15,20 +15,14 @@ import threading
 try:
 	from colorama import init as colorama_init
 except ImportError:
-	try:
-		os.system("pip install colorama")
-		from colorama import init as colorama_init
-	except:
-		print("Unable to download required modules!")
+	os.system("pip install colorama")
+	from colorama import init as colorama_init
 
 try:
 	from termcolor import cprint
 except ImportError:
-	try:
-		os.system("pip install termcolor")
-		from termcolor import cprint
-	except:
-		print("Unable to download required modules!")
+	os.system("pip install termcolor")
+	from termcolor import cprint
 
 # Init colorama for compat
 colorama_init()
